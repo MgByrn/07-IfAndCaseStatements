@@ -1,7 +1,7 @@
 txt = "The quick brown fox jumps over the lazy dog."
 
 ###############################################################################
-# TODO: 1. (2 pts)
+# done: 1. (2 pts)
 #
 #   Write a function called is_positive() that takes one parameter:
 #     - number (float)
@@ -13,9 +13,14 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def is_positive(number):
+    if number >=0:
+        return True
+    else:
+        return False
+print(is_positive(3))
 ###############################################################################
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #
 #   Write a function called contains() that takes two parameters:
 #     - str (string)
@@ -32,9 +37,18 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def contains(str, substr):
+    if substr in str:
+        return True
+    else:
+        return False
+print(contains(txt, "fox"))
+
+
+
 
 ###############################################################################
-# TODO: 3. (3 pts)
+# DONE: 3. (3 pts)
 #
 #   Write a function called display_rating() that takes one parameter:
 #     - rating (float)
@@ -63,3 +77,17 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def display_rating(rating):
+    if 4 <= rating <= 5:
+        print(f"Congratulations! You received a score of {rating}.")
+    elif 3 <= rating < 4:
+        print(f"Goodjob! However there is still room for improvement. You received a score of {rating}.")
+    elif 2 <= rating < 3:
+        print(f"You could use some improvement. You received a score of {rating}.")
+    elif 1 <= rating < 2:
+        print(f"You could use significant improvement. You received a score of {rating}.")
+    else:
+        print("Invalid score given.")
+
+
+display_rating(1.3)
